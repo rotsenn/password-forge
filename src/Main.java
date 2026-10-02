@@ -10,7 +10,12 @@ public class Main {
             mostrarMenu();
             option = leerOpcion(scanner);
 
-            System.out.println("Elegiste la opcion: " + option);
+            switch (option) {
+                case 1 -> System.out.println("Generar pendiente");
+                case 2 -> System.out.println("Evaluar: pendiente");
+                case 3 -> System.out.println("Hasta luego");
+                default -> System.out.println("Opción incorrecta");
+            }
         } while (option != 3);
         scanner.close();
     }
