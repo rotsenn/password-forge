@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
         int option;
 
         do {
@@ -30,8 +31,15 @@ public class Main {
     }
 
     public static int leerOpcion(Scanner scanner) {
+        int opcionLeida = 0;
         System.out.print("Opción: ");
-        int opcionLeida = scanner.nextInt();
+
+        if (scanner.hasNextInt()) {
+            opcionLeida = scanner.nextInt();
+            System.out.println("Se ha ingresado la opción: " + opcionLeida);
+        } else {
+            scanner.next();
+        }
         return opcionLeida;
     }
 }
