@@ -13,12 +13,24 @@ public class Main {
 
             switch (option) {
                 case 1 -> System.out.println("Generar pendiente");
-                case 2 -> System.out.println("Evaluar: pendiente");
-                case 3 -> System.out.println("Hasta luego");
+                case 2 -> {
+                    System.out.println("Evaluar: pendiente");
+                    
+                    String contrasenia = leerContrasenia(scanner);
+
+                    if (tieneNumero(contrasenia)) {
+                        System.out.println("Contraseña: " + "*****" + " --> Cumple!!");
+                    } else {
+                        System.out.println("Contraseña: " + "*****" + " --> No Cumple!!");
+                    }
+                }
+                case 3 -> System.out.println("Hasta luego!");
                 default -> System.out.println("Opción incorrecta");
             }
+            System.out.println();
         } while (option != 3);
         scanner.close();
+
     }
 
     public static void mostrarMenu() {
