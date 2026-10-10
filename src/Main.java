@@ -52,6 +52,34 @@ public class Main {
         } else {
             scanner.next();
         }
+        scanner.nextLine();
         return opcionLeida;
+
     }
+
+    public static String leerContrasenia(Scanner scanner) {
+        System.out.print("Contraseña: ");
+
+        String contraseniaIn = scanner.nextLine();
+
+        return contraseniaIn;
+    }
+
+    public static boolean tieneNumero(String contrasenia) {
+        for (int i = 0; i < contrasenia.length(); i++) {
+            char digito = contrasenia.charAt(i);
+            
+            if (Character.isDigit(digito)) {
+                return true;
+            }
+        }
+        return false; 
+    }
+
+    public static boolean tieneMayuscula(String contrasenia) { return true ; }
+
+    public static boolean tieneSimbolo(String contrasenia) { return true ; }
+
+    public static boolean hasLenMin(String contrasenia) { return true ; }
+
 }
